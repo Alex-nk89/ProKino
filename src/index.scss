@@ -1,0 +1,21 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  body {
+    background-color: var(--background-main);
+  }
+
+  /* sizes */
+  --base-size: 4px;
+  --size-xs: calc(var(--base-size) * 2);
+  --size-s: calc(var(--base-size) * 3);
+  --size-m: calc(var(--base-size) * 4);
+  --size-l: calc(var(--base-size) * 5);
+  --size-xl: calc(var(--base-size) * 6);
+  --size-xxl: calc(var(--base-size) * 7);
+  --size-xxxl: calc(var(--base-size) * 8);
+
+  /* colors */
+  --background-main: #000000de;
+  --background-header: #ffffffcc;
+}
