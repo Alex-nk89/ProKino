@@ -1,5 +1,5 @@
-import { PremieresList } from "../domains/films";
+import { PremieresList, PremieresRequestParams } from "../domains/films";
 
 export interface FilmService {
-  getPremieres(): Promise<PremieresList>;
+  getPremieres(params: PremieresRequestParams): Promise<PremieresList>;
 }

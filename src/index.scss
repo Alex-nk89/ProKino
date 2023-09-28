@@ -13,9 +13,18 @@
   --size-l: calc(var(--base-size) * 5);
   --size-xl: calc(var(--base-size) * 6);
   --size-xxl: calc(var(--base-size) * 7);
-  --size-xxxl: calc(var(--base-size) * 8);
+  --size-3xl: calc(var(--base-size) * 8);
+  --size-4xl: calc(var(--base-size) * 9);
+  --size-5xl: calc(var(--base-size) * 10);
+
+  --header-height: 80px;
+  --header-scrolling-height: 64px;
 
   /* colors */
   --background-main: #000000de;
   --background-header: #ffffffcc;
+  --bacground-carousel-title: #ffffff29;
+
+  /* animation */
+  --simple-animation: cubic-bezier(0.39, 0.575, 0.565, 1);
 }

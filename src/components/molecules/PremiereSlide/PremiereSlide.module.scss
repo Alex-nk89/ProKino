@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 21 / 9;
+  background-size: cover;
+  padding: var(--size-xl);
+
+  .info {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: var(--size-m);
+    border-radius: var(--size-xs);
+    background-color: var(--bacground-carousel-title);
+  }
+
+  .title {
+    color: var(--mantine-color-gray-0);
+    font-size: var(--mantine-h1-font-size);
+  }
+}

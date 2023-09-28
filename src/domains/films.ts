@@ -1,4 +1,4 @@
-import { Nullable } from "./common";
+import { Months, Nullable } from "./common";
 
 export interface PremieresList {
   total: number;
@@ -24,4 +24,9 @@ export interface Country {
 
 export interface Genre {
   genre: string;
+}
+
+export interface PremieresRequestParams {
+  year: number;
+  month: Months;
 }

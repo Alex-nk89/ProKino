@@ -5,9 +5,9 @@ interface Props extends PropsWithChildren {}
 
 export const AppDecorator = ({ children }: Props) => {
   return (
-    <main>
+    <>
       <Header />
-      {children}
-    </main>
+      <main>{children}</main>
+    </>
   );
 };

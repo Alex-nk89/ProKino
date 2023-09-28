@@ -1,17 +1,18 @@
 .wrapper {
   display: flex;
+  flex-wrap: nowrap;
+  gap: var(--size-m);
   align-items: center;
-  padding: var(--size-xs) var(--size-m);
-  position: sticky;
-  top: var(--size-m);
-  width: 90%;
-  height: calc(var(--size-xxl) * 2);
-  background-color: var(--background-header);
-  border-radius: var(--size-xs);
-  margin: auto;
-  transition: top 0.5s linear;
+  height: var(--header-height);
+  padding: 0 var(--size-xl);
+  transition: height 0.3s var(--simple-animation) !important;
+}
+
+.link {
+  display: flex;
+  align-items: center;
 }
 
 .isScrolling {
-  top: calc(var(--size-xxl) * (-3));
+  height: var(--header-scrolling-height);
 }
