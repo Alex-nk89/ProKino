@@ -1,0 +1,8 @@
+.wrapper {
+  @include info-block-V(var(--size-m));
+
+  .link {
+    border-radius: var(--mantine-radius-sm);
+    color: var(--text-white);
+  }
+}

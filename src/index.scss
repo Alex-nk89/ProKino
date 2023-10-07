@@ -21,10 +21,16 @@
   --header-scrolling-height: 64px;
 
   /* colors */
-  --background-main: #000000de;
+  --background-main: #000000;
   --background-header: #ffffffcc;
-  --bacground-carousel-title: #ffffff29;
+  --background-carousel-title: #00000059;
+  --text-white: white;
 
   /* animation */
   --simple-animation: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
 }

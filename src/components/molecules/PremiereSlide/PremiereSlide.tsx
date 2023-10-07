@@ -1,19 +1,28 @@
 import { PremiereSlideProps } from "./PremiereSlide.props";
 import styles from "./PremiereSlide.module.scss";
+import { Box, Typography } from "@mui/material";
 
 export const PremiereSlide = (props: PremiereSlideProps) => {
-  const { posterUrl, nameRu } = props;
+  const { backdrop, name, poster } = props;
 
   return (
-    <div
-      className={styles.container}
-      style={{ backgroundImage: `url("${posterUrl}")` }}
-    >
-      <div className={styles.info}>
-        {/* <Title order={2} size="h1" className={styles.title}>
-          {nameRu}
-        </Title> */}
-      </div>
-    </div>
+    <>
+      <Box
+        id="premiereSlide"
+        className={styles.container}
+        sx={{
+          backgroundImage: {
+            xs: `url("${poster.previewUrl}")`,
+            md: `url("${backdrop.previewUrl}")`,
+          },
+        }}
+      >
+        <div className={styles.info}>
+          <Typography variant="h1" className={styles.title}>
+            {name}
+          </Typography>
+        </div>
+      </Box>
+    </>
   );
 };

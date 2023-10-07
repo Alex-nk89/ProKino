@@ -1,14 +1,30 @@
-import { useMemo } from "react";
 import { usePremieres } from "../../../application/films";
-import { Months } from "../../../domains/common";
+import { Carousel } from "../../molecules/Carousel/Carousel";
+import { PremiereSlide } from "../../molecules/PremiereSlide/PremiereSlide";
+import { Link } from "react-router-dom";
+import dayjs from "dayjs";
 
 export const PremiereCarousele = () => {
-  const dateNow = useMemo(() => new Date(), []);
-
   const { data: premiereList } = usePremieres({
-    year: dateNow.getFullYear(),
-    month: Object.values(Months)[dateNow.getMonth()],
+    premiereDate: [
+      dayjs().format("DD.MM.YYYY"),
+      dayjs().add(14, "day").format("DD.MM.YYYY"),
+    ],
   });
 
-  return <div>123</div>;
+  return (
+    <Carousel
+      // autoPlay
+      infiniteLoop
+      interval={5000}
+      showThumbs={false}
+      showIndicators={false}
+    >
+      {premiereList?.docs.map((item) => (
+        <Link to="/" key={item.id}>
+          <PremiereSlide {...item} />
+        </Link>
+      ))}
+    </Carousel>
+  );
 };

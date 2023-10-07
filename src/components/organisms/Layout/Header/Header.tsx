@@ -1,13 +1,15 @@
 import styles from "./Header.module.scss";
-import { MobileMenuButton } from "..";
+import { MobileMenuButton, SearchField } from "..";
 import { Logo } from "../../../atoms/Logo/Logo";
 import { Link } from "react-router-dom";
-import { AppBar } from "@mui/material";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { AppShell, Box } from "@mantine/core";
+import { useLinksList } from "../../../../helpers/hooks/useLinksList";
 
 export const Header = () => {
   const [isScrolling, setIsScrolling] = useState(false);
+  const { desktopLinksList } = useLinksList();
 
   const cnHeader = clsx(styles.wrapper, {
     [styles.isScrolling]: isScrolling,
@@ -22,15 +24,19 @@ export const Header = () => {
   }, []);
 
   return (
-    <AppBar
-      component="header"
-      className={cnHeader}
-      sx={{ flexDirection: "initial" }}
-    >
+    <AppShell.Header className={cnHeader}>
       <Link to="/" className={styles.link}>
         <Logo />
       </Link>
+      <Box className={styles.linksList} visibleFrom="md">
+        {desktopLinksList.map((item) => (
+          <Link key={item.id} to={item.to}>
+            {item.name}
+          </Link>
+        ))}
+        <SearchField />
+      </Box>
       <MobileMenuButton />
-    </AppBar>
+    </AppShell.Header>
   );
 };

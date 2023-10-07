@@ -1,0 +1,10 @@
+@mixin info-block-H($gap: 0) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin info-block-V($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}

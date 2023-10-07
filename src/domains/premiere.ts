@@ -10,4 +10,5 @@ export interface PremieresList extends InfinityQuery {
   total: number;
 }
 
-export interface Premiere extends Pick<Film, "id" | "name" | "backdrop"> {}
+export interface Premiere
+  extends Pick<Film, "id" | "name" | "backdrop" | "poster"> {}

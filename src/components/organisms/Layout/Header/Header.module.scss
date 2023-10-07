@@ -3,9 +3,11 @@
   flex-wrap: nowrap;
   gap: var(--size-m);
   align-items: center;
-  height: var(--header-height);
+  height: var(--header-height) !important;
   padding: 0 var(--size-xl);
   transition: height 0.3s var(--simple-animation) !important;
+  background-color: #000 !important;
+  border-bottom: initial !important;
 }
 
 .link {
@@ -15,4 +17,18 @@
 
 .isScrolling {
   height: var(--header-scrolling-height);
+  background-color: #00000080;
+}
+
+.linksList {
+  display: flex;
+  flex: 1 0 0;
+  gap: var(--size-m);
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: var(--size-m);
+
+  a {
+    color: var(--text-white);
+  }
 }

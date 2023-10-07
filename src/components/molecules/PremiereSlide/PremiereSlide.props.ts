@@ -1,4 +1,3 @@
-import { Premiere } from "../../../domains/films";
+import { Premiere } from "../../../domains/premiere";
 
-export interface PremiereSlideProps
-  extends Pick<Premiere, "posterUrl" | "nameRu"> {}
+export interface PremiereSlideProps extends Premiere {}

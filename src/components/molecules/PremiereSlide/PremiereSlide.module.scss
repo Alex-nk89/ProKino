@@ -1,21 +1,32 @@
 .container {
-  display: flex;
-  align-items: flex-end;
-  aspect-ratio: 21 / 9;
+  @include info-block-V();
+
+  justify-content: flex-end;
+  aspect-ratio: 3 /4;
+  background-repeat: no-repeat;
   background-size: cover;
-  padding: var(--size-xl);
+  background-position: center;
+
+  @media (min-width: 900px) {
+    aspect-ratio: 21 /9;
+    background-size: cover;
+    flex-direction: row;
+  }
 
   .info {
-    display: flex;
-    justify-content: flex-end;
+    @include info-block-V();
+
+    flex: 0.4;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    padding: var(--size-m);
+    padding: var(--size-xxl);
     border-radius: var(--size-xs);
-    background-color: var(--bacground-carousel-title);
+    background-color: var(--background-carousel-title);
   }
 
   .title {
-    color: var(--mantine-color-gray-0);
-    font-size: var(--mantine-h1-font-size);
+    color: var(--grey-50);
+    font-size: 36px;
   }
 }
