@@ -1,0 +1,32 @@
+.container {
+  @include info-block-V();
+
+  justify-content: flex-end;
+  aspect-ratio: 3 /4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: 900px) {
+    aspect-ratio: 21 /9;
+    background-size: cover;
+    flex-direction: row;
+  }
+
+  .info {
+    @include info-block-V();
+
+    flex: 0.4;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: var(--size-xxl);
+    border-radius: var(--size-xs);
+    background-color: var(--background-carousel-title);
+  }
+
+  .title {
+    color: var(--grey-50);
+    font-size: 36px;
+  }
+}

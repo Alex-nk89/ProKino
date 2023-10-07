@@ -2,14 +2,33 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.scss";
-import { CssBaseline } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
+import { configureAxios } from "./services/index.ts";
+import { QueryClientProvider, QueryClient } from "react-query";
+import { createCssVars } from "./utils/createCssVars.ts";
+import { MantineProvider } from "@mantine/core";
+import "@mantine/core/styles.css";
+
+configureAxios();
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 3,
+    },
+  },
+});
+
+createCssVars();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <CssBaseline />
-      <App />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <MantineProvider defaultColorScheme="dark">
+          <App />
+        </MantineProvider>
+      </BrowserRouter>
+    </QueryClientProvider>
   </React.StrictMode>
 );

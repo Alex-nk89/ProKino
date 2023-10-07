@@ -1,10 +1,17 @@
-import { IconButton } from "@mui/material";
-import { Menu } from "@mui/icons-material";
+import { Box, Burger } from "@mantine/core";
+import styles from "./MobileMenuButton.module.scss";
+import { useDisclosure } from "@mantine/hooks";
+import { MobileMenu } from "../../../molecules/MobileMenu/MobileMenu";
 
 export const MobileMenuButton = () => {
+  const [isOpen, { open, close }] = useDisclosure();
+
   return (
-    <IconButton sx={{ display: { md: "none" } }}>
-      <Menu />
-    </IconButton>
+    <>
+      <Box hiddenFrom="md" className={styles.wrapper}>
+        <Burger onClick={open} />
+      </Box>
+      <MobileMenu isOpened={isOpen} onClose={close} />
+    </>
   );
 };
