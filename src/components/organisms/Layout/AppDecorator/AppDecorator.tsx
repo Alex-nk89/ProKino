@@ -8,7 +8,7 @@ export const AppDecorator = ({ children }: Props) => {
   return (
     <AppShell>
       <Header />
-      {/* <main>{children}</main> */}
+      <main>{children}</main>
     </AppShell>
   );
 };
