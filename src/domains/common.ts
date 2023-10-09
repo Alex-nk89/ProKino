@@ -33,8 +33,8 @@ export type TitleTypes =
   | "tv-show";
 
 export interface Url {
-  url: string;
-  previewUrl: string;
+  url: Nullable<string>;
+  previewUrl: Nullable<string>;
 }
 
 export interface Name {
@@ -72,11 +72,11 @@ export interface Finance {
 }
 
 export interface Premiere {
-  country: string;
-  world: string;
-  russia: string;
-  digital: string;
-  cinema: string;
+  country?: string;
+  world?: string;
+  russia?: string;
+  digital?: string;
+  cinema?: string;
 }
 
 export interface ReleaseYears {

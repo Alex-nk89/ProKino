@@ -10,8 +10,8 @@ export const filmService: PremiereService = {
       params: {
         "premiere.world": params.premiereDate.filter(Boolean).join("-"),
         selectFields: getSelectFields().premiereValues.join(" "),
-        "backdrop.url": "!null",
-        "poster.url": "!null",
+        "backdrop.previewUrl": "!null",
+        "poster.previewUrl": "!null",
         name: "!null",
         limit: 50,
       },
