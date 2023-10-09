@@ -11,4 +11,13 @@ export interface PremieresList extends InfinityQuery {
 }
 
 export interface Premiere
-  extends Pick<Film, "id" | "name" | "backdrop" | "poster"> {}
+  extends Pick<
+    Film,
+    | "id"
+    | "name"
+    | "backdrop"
+    | "poster"
+    | "description"
+    | "shortDescription"
+    | "premiere"
+  > {}

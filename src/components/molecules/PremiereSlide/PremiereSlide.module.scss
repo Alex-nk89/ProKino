@@ -11,22 +11,35 @@
     aspect-ratio: 21 /9;
     background-size: cover;
     flex-direction: row;
+    border-radius: var(--mantine-radius-md);
+  }
+
+  .poster {
+    flex-grow: 0.6;
+    padding: var(--size-m);
   }
 
   .info {
-    @include info-block-V();
+    @include info-block-V(var(--size-s));
 
     flex: 0.4;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
     padding: var(--size-xxl);
-    border-radius: var(--size-xs);
     background-color: var(--background-carousel-title);
+    text-align: left;
   }
 
   .title {
-    color: var(--grey-50);
-    font-size: 36px;
+    color: var(--text-white);
+  }
+}
+
+.withPoster {
+  background-color: #ffffff10;
+
+  .info {
+    background-color: initial;
   }
 }

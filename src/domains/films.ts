@@ -11,6 +11,7 @@ import {
   TitleTypes,
   Url,
   Voites,
+  Nullable,
 } from "./common";
 
 export interface Film {
@@ -21,8 +22,8 @@ export interface Film {
   names: Name;
   type: TitleTypes;
   year: number;
-  description: string;
-  shortDescription: string;
+  description: Nullable<string>;
+  shortDescription: Nullable<string>;
   slogan: string;
   status: string;
   rating: Rating;

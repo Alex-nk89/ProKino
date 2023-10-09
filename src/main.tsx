@@ -8,6 +8,8 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { createCssVars } from "./utils/createCssVars.ts";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
+import dayjs from "dayjs";
+import "../public/locale/ru";
 
 configureAxios();
 
@@ -20,6 +22,7 @@ const queryClient = new QueryClient({
 });
 
 createCssVars();
+dayjs.locale("ru");
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

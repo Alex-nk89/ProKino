@@ -14,11 +14,12 @@ export const PremiereCarousele = () => {
 
   return (
     <Carousel
-      // autoPlay
+      autoPlay
       infiniteLoop
       interval={5000}
       showThumbs={false}
       showIndicators={false}
+      showStatus={false}
     >
       {premiereList?.docs.map((item) => (
         <Link to="/" key={item.id}>
