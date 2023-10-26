@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { PremiereSlide } from "./PremiereSlide";
+import { Cover } from "./Cover";
 import { premiereSlideMock } from "../../../helpers/mocks";
 import { MantineProvider } from "@mantine/core";
 import "../../../index.scss";
 import "@mantine/core/styles.css";
 
 const meta = {
-  title: "molecules/PremiereSlide",
-  component: PremiereSlide,
+  title: "molecules/Cover",
+  component: Cover,
   decorators: [
     (Story) => (
       <MantineProvider>
@@ -15,7 +15,7 @@ const meta = {
       </MantineProvider>
     ),
   ],
-} satisfies Meta<typeof PremiereSlide>;
+} satisfies Meta<typeof Cover>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

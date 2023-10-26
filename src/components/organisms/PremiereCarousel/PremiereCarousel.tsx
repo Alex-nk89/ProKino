@@ -1,6 +1,6 @@
 import { usePremieres } from "../../../application/films";
 import { Carousel } from "../../molecules/Carousel/Carousel";
-import { PremiereSlide } from "../../molecules/PremiereSlide/PremiereSlide";
+import { Cover } from "../../molecules/Cover/Cover";
 import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 
@@ -22,8 +22,8 @@ export const PremiereCarousele = () => {
       showStatus={false}
     >
       {premiereList?.docs.map((item) => (
-        <Link to="/" key={item.id}>
-          <PremiereSlide {...item} />
+        <Link to={`/movie/${item.id}`} key={item.id}>
+          <Cover {...item} />
         </Link>
       ))}
     </Carousel>
