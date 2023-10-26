@@ -1,3 +1,4 @@
 export const keys = {
-  getPremieres: ["premieres"],
+  getPremieres: ["premieres"] as const,
+  getMovie: (id: number) => ["movie", `${id}`] as const,
 };

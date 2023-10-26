@@ -8,6 +8,8 @@ export const getSelectFields = () => {
     "shortDescription",
     "description",
     "premiere",
+    "ageRating",
+    "genres",
   ];
 
   return { premiereValues };
