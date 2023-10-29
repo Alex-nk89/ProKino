@@ -9,6 +9,7 @@
 
   @media (min-width: 900px) {
     aspect-ratio: 21 /9;
+    max-height: 500px;
     background-size: cover;
     flex-direction: row;
     border-radius: var(--mantine-radius-md);
@@ -38,7 +39,7 @@
 }
 
 .withPoster {
-  background-color: #ffffff10;
+  background-color: var(--container-background-color);
 
   .info {
     background-color: initial;

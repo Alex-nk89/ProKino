@@ -9,14 +9,17 @@ import { createCssVars } from "./utils/createCssVars.ts";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration";
 import "../public/locale/ru";
 
+dayjs.extend(duration);
 configureAxios();
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       retry: 3,
+      refetchOnWindowFocus: false,
     },
   },
 });

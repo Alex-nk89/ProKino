@@ -1,0 +1,15 @@
+.movieInfo {
+  @include info-block-V(var(--size-xs));
+
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: var(--size-xl);
+  }
+}
+
+.links {
+  @include info-block-H(var(--size-xs));
+
+  flex-wrap: wrap;
+}

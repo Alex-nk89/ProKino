@@ -29,7 +29,7 @@ export interface Film {
   rating: Rating;
   votes: Voites;
   movieLength: number;
-  ratingMpaa: string;
+  ratingMpaa: Nullable<string>;
   ageRating: Nullable<number>;
   logo: Pick<Url, "url">;
   poster: Url;

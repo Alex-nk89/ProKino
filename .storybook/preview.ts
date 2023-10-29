@@ -1,4 +1,6 @@
 import type { Preview } from "@storybook/react";
+import "../src/index.scss";
+import "@mantine/core/styles.css";
 
 const preview: Preview = {
   parameters: {
