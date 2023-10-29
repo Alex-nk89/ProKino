@@ -13,6 +13,23 @@ const isPerson = (value: MovieInfoProps["value"]): value is Person[] =>
 export const AboutMovie = memo(() => {
   const movieInfo = useAboutMovie();
 
+  const PersonsList = (list: Person[]) => {
+    if (!list.length) {
+      return <Text>-</Text>;
+    }
+
+    const isLast = (index: number) => list.length - 1 === index;
+
+    return list.map((item, index) => (
+      <Link key={index} to={`/person/${item.id}`}>
+        <Text>
+          {item.name}
+          {!isLast(index) && ", "}
+        </Text>
+      </Link>
+    ));
+  };
+
   return (
     <Container title="О фильме">
       <div className={styles.movieInfo}>
@@ -20,13 +37,7 @@ export const AboutMovie = memo(() => {
           <div key={index}>
             <Text>{item.key}</Text>
             {isPerson(item.value) ? (
-              <div className={styles.links}>
-                {item.value.map((item, index) => (
-                  <Link key={index} to={`/person/${item.id}`}>
-                    <Text>{item.name}</Text>
-                  </Link>
-                ))}
-              </div>
+              <div className={styles.links}>{PersonsList(item.value)}</div>
             ) : (
               <Text>{item.value}</Text>
             )}

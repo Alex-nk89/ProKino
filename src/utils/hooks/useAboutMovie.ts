@@ -20,23 +20,33 @@ export const useAboutMovie = () => {
     },
     {
       key: "Режиссер",
-      value: movie?.persons.filter((item) => item.enProfession === "director"),
+      value: movie?.persons.filter(
+        (item) => item.enProfession === "director" && !!item.name
+      ),
     },
     {
       key: "Сценарий",
-      value: movie?.persons.filter((item) => item.enProfession === "writer"),
+      value: movie?.persons.filter(
+        (item) => item.enProfession === "writer" && !!item.name
+      ),
     },
     {
       key: "Продюссер",
-      value: movie?.persons.filter((item) => item.enProfession === "producer"),
+      value: movie?.persons.filter(
+        (item) => item.enProfession === "producer" && !!item.name
+      ),
     },
     {
       key: "Оператор",
-      value: movie?.persons.filter((item) => item.enProfession === "operator"),
+      value: movie?.persons.filter(
+        (item) => item.enProfession === "operator" && !!item.name
+      ),
     },
     {
       key: "Композитор",
-      value: movie?.persons.filter((item) => item.enProfession === "composer"),
+      value: movie?.persons.filter(
+        (item) => item.enProfession === "composer" && !!item.name
+      ),
     },
     {
       key: "Художник",
@@ -46,7 +56,9 @@ export const useAboutMovie = () => {
     },
     {
       key: "Монтаж",
-      value: movie?.persons.filter((item) => item.enProfession === "editor"),
+      value: movie?.persons.filter(
+        (item) => item.enProfession === "editor" && !!item.name
+      ),
     },
     {
       key: "Премьера в мире",
@@ -54,11 +66,11 @@ export const useAboutMovie = () => {
     },
     {
       key: "Рейтинг MPAA",
-      value: movie?.ratingMpaa,
+      value: movie?.ratingMpaa ?? "-",
     },
     {
       key: "Продолжительность",
-      value: `${movie?.movieLength} мин.`,
+      value: movie?.movieLength ? `${movie?.movieLength} мин.` : "-",
     },
   ];
 
