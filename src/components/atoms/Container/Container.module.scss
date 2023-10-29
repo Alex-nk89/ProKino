@@ -1,5 +1,11 @@
 .wrapper {
+  @include info-block-V(var(--size-m));
+
   padding: var(--size-xl);
   border-radius: var(--mantine-radius-md);
   background-color: var(--container-background-color);
+
+  .title {
+    color: var(--text-white);
+  }
 }

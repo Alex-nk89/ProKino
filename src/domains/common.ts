@@ -48,11 +48,34 @@ export interface Trailers {
   type: string;
 }
 
+export type PersonProffessionRu =
+  | "актеры"
+  | "композиторы"
+  | "художники"
+  | "режиссеры"
+  | "монтажеры"
+  | "операторы"
+  | "продюсеры"
+  | "редакторы";
+
+export type PersonProffessionEn =
+  | "actor"
+  | "composer"
+  | "designer"
+  | "director"
+  | "editor"
+  | "operator"
+  | "producer"
+  | "writer";
+
 export interface Person {
   id: number;
   photo: string;
   name: string;
   enName: string;
+  description: string;
+  profession: PersonProffessionRu;
+  enProfession: PersonProffessionEn;
 }
 
 export interface ReviewInfo {
