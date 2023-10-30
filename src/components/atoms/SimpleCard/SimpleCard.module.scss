@@ -1,0 +1,11 @@
+.container {
+  @include info-block-V(var(--size-m));
+
+  width: fit-content;
+
+  img {
+    height: 200px;
+    border-radius: var(--mantine-radius-sm);
+    object-fit: contain;
+  }
+}
