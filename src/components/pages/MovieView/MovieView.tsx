@@ -4,6 +4,7 @@ import MovieProvider from "../../../application/providers/movieProvider";
 import { MovieCover } from "../../organisms/MovieCover/MovieCover";
 import { AboutMovie } from "../../organisms/AboutMovie/AboutMovie";
 import { MovieCast } from "../../organisms/MovieCast/MovieCast";
+import { MovieDescription } from "../../molecules/MovieDescription/MovieDescription";
 
 const MovieView = () => {
   const { id } = useParams();
@@ -12,8 +13,9 @@ const MovieView = () => {
     <MovieProvider id={id || 0}>
       <div className={styles.wrapper}>
         <MovieCover />
-        <MovieCast />
         <AboutMovie />
+        <MovieCast />
+        <MovieDescription />
       </div>
     </MovieProvider>
   );
