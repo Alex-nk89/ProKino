@@ -1,5 +1,3 @@
 .container {
   @include info-block-H(var(--size-xl));
-
-  overflow-x: auto;
 }

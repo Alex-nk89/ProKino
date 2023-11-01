@@ -7,5 +7,15 @@
     height: 200px;
     border-radius: var(--mantine-radius-sm);
     object-fit: contain;
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  embed {
+    aspect-ratio: 16 / 9;
+    border-radius: var(--mantine-radius-sm);
   }
 }

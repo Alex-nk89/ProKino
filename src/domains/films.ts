@@ -12,6 +12,7 @@ import {
   Url,
   Voites,
   Nullable,
+  Videos,
 } from "./common";
 
 export interface Film {
@@ -58,4 +59,5 @@ export interface Film {
   seriesLength: number;
   isSeries: boolean;
   audience: Audience;
+  videos?: Videos;
 }

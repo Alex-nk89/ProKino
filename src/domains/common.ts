@@ -119,3 +119,16 @@ export interface InfinityQuery {
 }
 
 export type SelectFields = keyof Film;
+
+interface Video {
+  url: Nullable<string>;
+  name: Nullable<string>;
+  site: Nullable<string>;
+  type: Nullable<string>;
+  size: number;
+}
+
+export interface Videos {
+  trailers: Video[];
+  teasers: Video[];
+}
