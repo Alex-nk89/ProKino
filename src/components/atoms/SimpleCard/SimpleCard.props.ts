@@ -1,5 +1,6 @@
 export interface SimpleCardProps {
-  imgSrc: string;
+  imgSrc?: string;
+  videoSrc?: string;
   title?: string;
   description?: string;
 }

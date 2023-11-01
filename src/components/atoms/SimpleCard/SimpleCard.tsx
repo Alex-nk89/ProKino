@@ -4,10 +4,11 @@ import { SimpleCardProps } from "./SimpleCard.props";
 import { Text } from "@mantine/core";
 
 export const SimpleCard = memo(
-  ({ imgSrc, title, description }: SimpleCardProps) => {
+  ({ imgSrc, videoSrc, title, description }: SimpleCardProps) => {
     return (
       <div className={styles.container}>
-        <img src={imgSrc} />
+        {imgSrc && !videoSrc && <img src={imgSrc} />}
+        {videoSrc && !imgSrc && <embed src={videoSrc} />}
         {title && (
           <Text size="lg" lineClamp={2}>
             {title}

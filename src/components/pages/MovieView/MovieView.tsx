@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-import styles from "./MovieView.module.scss";
 import MovieProvider from "../../../application/providers/movieProvider";
 import { MovieCover } from "../../organisms/MovieCover/MovieCover";
 import { AboutMovie } from "../../organisms/AboutMovie/AboutMovie";
 import { MovieCast } from "../../organisms/MovieCast/MovieCast";
 import { MovieDescription } from "../../molecules/MovieDescription/MovieDescription";
+import { MovieTrailers } from "../../organisms/MovieTrailers/MovieTrailers";
+import styles from "./MovieView.module.scss";
 
 const MovieView = () => {
   const { id } = useParams();
@@ -16,6 +17,7 @@ const MovieView = () => {
         <AboutMovie />
         <MovieCast />
         <MovieDescription />
+        <MovieTrailers />
       </div>
     </MovieProvider>
   );

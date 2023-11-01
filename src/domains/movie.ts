@@ -18,6 +18,7 @@ export interface Movie
     | "premiere"
     | "ratingMpaa"
     | "movieLength"
+    | "videos"
   > {}
 
 export interface MovieResponse {
