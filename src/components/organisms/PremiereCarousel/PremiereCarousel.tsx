@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { usePremieres } from "../../../application/films";
 import { Carousel } from "../../molecules/Carousel/Carousel";
 import { Cover } from "../../molecules/Cover/Cover";
@@ -12,6 +13,15 @@ export const PremiereCarousele = () => {
     ],
   });
 
+  const handleClick = useCallback(
+    (index: number) =>
+      sessionStorage.setItem(
+        "cover",
+        JSON.stringify(premiereList?.docs.at(index))
+      ),
+    [premiereList?.docs]
+  );
+
   return (
     <Carousel
       autoPlay
@@ -21,8 +31,12 @@ export const PremiereCarousele = () => {
       showIndicators={false}
       showStatus={false}
     >
-      {premiereList?.docs.map((item) => (
-        <Link to={`/movie/${item.id}`} key={item.id}>
+      {premiereList?.docs.map((item, index) => (
+        <Link
+          to={`/movie/${item.id}`}
+          key={item.id}
+          onClick={() => handleClick(index)}
+        >
           <Cover {...item} />
         </Link>
       ))}

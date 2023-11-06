@@ -19,6 +19,7 @@ export interface Movie
     | "ratingMpaa"
     | "movieLength"
     | "videos"
+    | "rating"
   > {}
 
 export interface MovieResponse {

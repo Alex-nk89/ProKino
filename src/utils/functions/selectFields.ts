@@ -10,6 +10,7 @@ export const getSelectFields = () => {
     "premiere",
     "ageRating",
     "genres",
+    "movieLength",
   ];
 
   return { premiereValues };

@@ -5,8 +5,10 @@ import clsx from "clsx";
 import { Title } from "@mantine/core";
 
 export const Container = forwardRef<HTMLDivElement, ContainerProps>(
-  ({ children, classname, title }, ref) => {
-    const cn = clsx(styles.wrapper, classname);
+  ({ children, classname, title, withBackground }, ref) => {
+    const cn = clsx(styles.wrapper, classname, {
+      [styles.withBackground]: withBackground,
+    });
 
     return (
       <div ref={ref} className={cn}>

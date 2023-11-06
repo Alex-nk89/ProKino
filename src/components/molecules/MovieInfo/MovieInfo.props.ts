@@ -1,4 +1,6 @@
 import { Movie } from "../../../domains/movie";
 
-export interface MovieProps
-  extends Partial<Pick<Movie, "genres" | "year" | "ageRating">> {}
+export interface MovieInfoProps
+  extends Partial<
+    Pick<Movie, "ageRating" | "genres" | "movieLength" | "rating" | "year">
+  > {}
