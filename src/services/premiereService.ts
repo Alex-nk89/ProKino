@@ -1,7 +1,7 @@
 import { api } from ".";
 import { PremiereService } from "../application/ports";
 import { PremieresRequestParams } from "../domains/premiere";
-import { getSelectFields } from "../utils/selectFields";
+import { getSelectFields } from "../utils/functions/selectFields";
 
 export const filmService: PremiereService = {
   getPremieres(params: PremieresRequestParams) {

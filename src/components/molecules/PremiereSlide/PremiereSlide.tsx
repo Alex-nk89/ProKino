@@ -1,7 +1,7 @@
 import { Box, Title, Text, Image } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import styles from "./Cover.module.scss";
-import { getDatePremiere } from "../../../utils/date";
+import { getDatePremiere } from "../../../utils/functions/date";
 import clsx from "clsx";
 import { CoverProps } from "../Cover/Cover.props";
 
@@ -35,7 +35,7 @@ export const PremiereSlide = (props: CoverProps) => {
           {isShowDescription && (
             <Text lineClamp={4}>{shortDescription || description}</Text>
           )}
-          <Text>{getDatePremiere(premiere)}</Text>
+          {premiere && <Text>{getDatePremiere(premiere)}</Text>}
         </div>
       </Box>
     </>

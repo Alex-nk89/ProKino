@@ -1,3 +1,5 @@
 .wrapper {
   @include info-block-H(var(--size-s));
+
+  align-items: center;
 }

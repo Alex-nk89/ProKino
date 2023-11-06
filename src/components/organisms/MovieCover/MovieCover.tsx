@@ -1,26 +1,21 @@
 import { memo } from "react";
 import { useCurrentMovie } from "../../../application/providers/movieProvider";
 import { Cover } from "../../molecules/Cover/Cover";
+import { useParams } from "react-router-dom";
+import { Skeleton } from "@mantine/core";
 
 export const MovieCover = memo(() => {
-  const { movie } = useCurrentMovie();
+  const { movie, isLoading } = useCurrentMovie();
+  const params = useParams();
 
-  return (
-    <>
-      {movie && (
-        <Cover
-          isMoviePage
-          id={movie?.id}
-          name={movie.name}
-          poster={movie.poster}
-          backdrop={movie.backdrop}
-          shortDescription={movie.shortDescription}
-          description={movie.description}
-          year={movie.year}
-          genres={movie.genres}
-          ageRating={movie.ageRating}
-        />
-      )}
-    </>
-  );
+  const cover = sessionStorage.getItem("cover");
+  const isShowCover =
+    cover && params.id === JSON.parse(cover).id.toString() && !movie;
+  const coverProps = isShowCover ? { ...JSON.parse(cover) } : { ...movie };
+
+  if (isLoading && !isShowCover) {
+    return <Skeleton visible={true} height={500} />;
+  }
+
+  return <Cover {...coverProps} />;
 });

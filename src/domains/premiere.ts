@@ -20,4 +20,9 @@ export interface Premiere
     | "description"
     | "shortDescription"
     | "premiere"
+    | "ageRating"
+    | "genres"
+    | "movieLength"
+    | "rating"
+    | "year"
   > {}

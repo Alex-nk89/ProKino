@@ -5,7 +5,7 @@ import "./index.scss";
 import { BrowserRouter } from "react-router-dom";
 import { configureAxios } from "./services/index.ts";
 import { QueryClientProvider, QueryClient } from "react-query";
-import { createCssVars } from "./utils/createCssVars.ts";
+import { createCssVars } from "./utils/functions/createCssVars.ts";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import dayjs from "dayjs";
