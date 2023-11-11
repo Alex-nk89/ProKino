@@ -3,3 +3,15 @@
 
   padding: var(--size-xl);
 }
+
+.info {
+  @include info-block-V(var(--size-m));
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+
+    & > div {
+      flex-basis: 100%;
+    }
+  }
+}

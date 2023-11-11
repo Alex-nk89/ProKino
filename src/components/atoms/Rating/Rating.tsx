@@ -7,7 +7,7 @@ export const Rating = ({ rating }: RatingProps) => {
 
   return (
     <Badge radius="sm" size="lg" color={ratingColor}>
-      {rating}
+      {rating.toFixed(1)}
     </Badge>
   );
 };

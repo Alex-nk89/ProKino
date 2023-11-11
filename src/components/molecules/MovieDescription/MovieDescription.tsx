@@ -6,7 +6,7 @@ export const MovieDescription = () => {
   const { movie, isLoading } = useCurrentMovie();
 
   if (isLoading) {
-    return <Skeleton visible={true} height={150} />;
+    return <Skeleton visible={true} height={250} />;
   }
 
   if (!movie?.description) {

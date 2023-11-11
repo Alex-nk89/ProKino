@@ -6,6 +6,7 @@ import { MovieCast } from "../../organisms/MovieCast/MovieCast";
 import { MovieDescription } from "../../molecules/MovieDescription/MovieDescription";
 import { MovieTrailers } from "../../organisms/MovieTrailers/MovieTrailers";
 import styles from "./MovieView.module.scss";
+import { MovieRating } from "../../organisms/MovieRating/MovieRating";
 
 const MovieView = () => {
   const { id } = useParams();
@@ -14,9 +15,12 @@ const MovieView = () => {
     <MovieProvider id={id || 0}>
       <div className={styles.wrapper}>
         <MovieCover />
-        <AboutMovie />
+        <div className={styles.info}>
+          <MovieDescription />
+          <MovieRating />
+        </div>
         <MovieCast />
-        <MovieDescription />
+        <AboutMovie />
         <MovieTrailers />
       </div>
     </MovieProvider>

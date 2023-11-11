@@ -1,17 +1,19 @@
 import { memo } from "react";
 import { Container } from "../../atoms/Container/Container";
-import { Text } from "@mantine/core";
-import styles from "./AboutMovie.module.scss";
+import { Skeleton, Text } from "@mantine/core";
 import { useAboutMovie } from "../../../utils/hooks/useAboutMovie";
 import { MovieInfoProps } from "../../../domains/movie";
 import { Person } from "../../../domains/common";
 import { Link } from "react-router-dom";
+import styles from "./AboutMovie.module.scss";
+import { useCurrentMovie } from "../../../application/providers/movieProvider";
 
 const isPerson = (value: MovieInfoProps["value"]): value is Person[] =>
   typeof value === "object";
 
 export const AboutMovie = memo(() => {
   const movieInfo = useAboutMovie();
+  const { isLoading } = useCurrentMovie();
 
   const PersonsList = (list: Person[]) => {
     if (!list.length) {
@@ -29,6 +31,10 @@ export const AboutMovie = memo(() => {
       </Link>
     ));
   };
+
+  if (isLoading) {
+    return <Skeleton visible height={400} />;
+  }
 
   return (
     <Container title="О фильме">
