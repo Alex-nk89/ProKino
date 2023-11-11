@@ -1,0 +1,17 @@
+.container {
+  //   @include info-block-V(var(--size-m));
+
+  .kpRating {
+    @include info-block-H(var(--size-m));
+
+    align-items: center;
+    align-self: center;
+  }
+}
+
+.ratingBlock {
+  @include info-block-V(var(--base-size));
+
+  justify-content: center;
+  align-items: center;
+}

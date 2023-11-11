@@ -8,3 +8,9 @@
   flex-direction: column;
   gap: $gap;
 }
+
+@mixin grid-columns($template: repeat(2, 1fr), $gap: var(--size-l)) {
+  display: grid;
+  grid-template-columns: $template;
+  gap: $gap;
+}

@@ -69,7 +69,7 @@ export const useAboutMovie = () => {
       value: movie?.ratingMpaa ?? "-",
     },
     {
-      key: "Продолжительность",
+      key: "Время",
       value: movie?.movieLength ? `${movie?.movieLength} мин.` : "-",
     },
   ];

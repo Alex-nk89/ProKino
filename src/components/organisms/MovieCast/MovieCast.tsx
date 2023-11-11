@@ -4,9 +4,10 @@ import { Container } from "../../atoms/Container/Container";
 import { SimpleCard } from "../../atoms/SimpleCard/SimpleCard";
 import { Link } from "react-router-dom";
 import { HorizontalList } from "../../atoms/HorizontalList/HorizontalList";
+import { Skeleton } from "@mantine/core";
 
 export const MovieCast = () => {
-  const { movie } = useCurrentMovie();
+  const { movie, isLoading } = useCurrentMovie();
 
   const castList = useMemo(
     () =>
@@ -15,6 +16,10 @@ export const MovieCast = () => {
       ),
     [movie?.persons]
   );
+
+  if (isLoading) {
+    return <Skeleton visible height={250} />;
+  }
 
   if (castList?.length === 0) {
     return null;
