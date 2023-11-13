@@ -21,6 +21,7 @@ export interface Movie
     | "videos"
     | "rating"
     | "votes"
+    | "facts"
   > {}
 
 export interface MovieResponse {

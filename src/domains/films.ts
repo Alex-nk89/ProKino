@@ -13,6 +13,7 @@ import {
   Voites,
   Nullable,
   Videos,
+  Fact,
 } from "./common";
 
 export interface Film {
@@ -60,4 +61,5 @@ export interface Film {
   isSeries: boolean;
   audience: Audience;
   videos?: Videos;
+  facts: Fact[];
 }
