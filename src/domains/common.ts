@@ -132,3 +132,9 @@ export interface Videos {
   trailers: Video[];
   teasers: Video[];
 }
+
+export interface Fact {
+  value: string;
+  type: string;
+  spoiler: boolean;
+}

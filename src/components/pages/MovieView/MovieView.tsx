@@ -7,6 +7,7 @@ import { MovieDescription } from "../../molecules/MovieDescription/MovieDescript
 import { MovieTrailers } from "../../organisms/MovieTrailers/MovieTrailers";
 import styles from "./MovieView.module.scss";
 import { MovieRating } from "../../organisms/MovieRating/MovieRating";
+import { MovieFacts } from "../../organisms/MovieFacts/MovieFacts";
 
 const MovieView = () => {
   const { id } = useParams();
@@ -22,6 +23,7 @@ const MovieView = () => {
         <MovieCast />
         <AboutMovie />
         <MovieTrailers />
+        <MovieFacts />
       </div>
     </MovieProvider>
   );

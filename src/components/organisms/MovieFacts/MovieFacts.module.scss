@@ -1,0 +1,7 @@
+.container {
+  @include info-block-H(var(--size-xl));
+
+  .factCard {
+    width: 450px;
+  }
+}
