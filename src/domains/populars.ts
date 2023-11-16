@@ -1,16 +1,16 @@
 import { InfinityQuery } from "./common";
 import { Film } from "./films";
 
-export interface PremieresRequestParams {
+export interface PopularsRequestParams {
   premiereDate: string[];
 }
 
-export interface PremieresList extends InfinityQuery {
-  docs: Premiere[];
+export interface PopularsList extends InfinityQuery {
+  docs: Popular[];
   total: number;
 }
 
-export interface Premiere
+export interface Popular
   extends Pick<
     Film,
     | "id"

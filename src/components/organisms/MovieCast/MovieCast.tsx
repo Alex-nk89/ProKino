@@ -29,7 +29,7 @@ export const MovieCast = () => {
     <Container title="Актеры">
       <HorizontalList>
         {castList?.map((item) => (
-          <Link to={`/person/${item.id}`}>
+          <Link key={item.id} to={`/person/${item.id}`}>
             <SimpleCard imgSrc={item.photo} title={item.name} />
           </Link>
         ))}

@@ -11,7 +11,16 @@ export const getSelectFields = () => {
     "ageRating",
     "genres",
     "movieLength",
+    "rating",
   ];
 
-  return { premiereValues };
+  const premiereUrl = premiereValues
+    .map((item) => `selectFields=${item}`)
+    .join("&");
+
+  const premiereNotNullFileds = ["name", "backdrop.url"]
+    .map((item) => `notNullFields=${item}`)
+    .join("&");
+
+  return { premiereValues, premiereUrl, premiereNotNullFileds };
 };

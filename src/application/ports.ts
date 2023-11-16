@@ -1,8 +1,8 @@
 import { Movie, MovieResponse } from "../domains/movie";
-import { PremieresList, PremieresRequestParams } from "../domains/premiere";
+import { PopularsList, PopularsRequestParams } from "../domains/populars";
 
-export interface PremiereService {
-  getPremieres(params: PremieresRequestParams): Promise<PremieresList>;
+export interface PopularService {
+  getPremieres(params: PopularsRequestParams): Promise<PopularsList>;
 }
 
 export interface MovieService {

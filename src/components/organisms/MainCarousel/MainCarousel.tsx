@@ -1,15 +1,15 @@
 import { useCallback } from "react";
-import { usePremieres } from "../../../application/films";
+import { usePopulars } from "../../../application/films";
 import { Carousel } from "../../molecules/Carousel/Carousel";
 import { Cover } from "../../molecules/Cover/Cover";
 import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 
-export const PremiereCarousele = () => {
-  const { data: premiereList } = usePremieres({
+export const MainCarousele = () => {
+  const { data: premiereList } = usePopulars({
     premiereDate: [
+      dayjs().add(-1, "years").format("DD.MM.YYYY"),
       dayjs().format("DD.MM.YYYY"),
-      dayjs().add(14, "day").format("DD.MM.YYYY"),
     ],
   });
 
