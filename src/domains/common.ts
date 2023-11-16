@@ -138,3 +138,18 @@ export interface Fact {
   type: string;
   spoiler: boolean;
 }
+
+export type ImageType =
+  | "backdrops"
+  | "cover"
+  | "frame"
+  | "promo"
+  | "screenshot"
+  | "shooting"
+  | "still"
+  | "wallpaper";
+
+export interface InfinityQueryParams {
+  page?: number;
+  limit?: number;
+}
