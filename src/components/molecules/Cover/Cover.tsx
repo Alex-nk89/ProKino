@@ -2,7 +2,6 @@ import { CoverProps } from "./Cover.props";
 import { Box, Title, Text, Image } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import styles from "./Cover.module.scss";
-import { getDatePremiere } from "../../../utils/functions/date";
 import clsx from "clsx";
 import { MovieInfo } from "../MovieInfo/MovieInfo";
 
@@ -13,7 +12,6 @@ export const Cover = (props: CoverProps) => {
     poster,
     description,
     shortDescription,
-    premiere,
     ageRating,
     genres,
     movieLength,
@@ -54,7 +52,6 @@ export const Cover = (props: CoverProps) => {
           {isShowDescription && (
             <Text lineClamp={4}>{shortDescription || description}</Text>
           )}
-          {premiere && <Text>{getDatePremiere(premiere)}</Text>}
         </div>
       </Box>
     </>

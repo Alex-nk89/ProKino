@@ -61,6 +61,10 @@ export const useAboutMovie = () => {
       ),
     },
     {
+      key: "Премьера в России",
+      value: dayjs(movie?.premiere.russia).format("DD MMMM YYYY"),
+    },
+    {
       key: "Премьера в мире",
       value: dayjs(movie?.premiere.world).format("DD MMMM YYYY"),
     },

@@ -24,7 +24,11 @@ export const MovieFacts = () => {
       <ScrollArea>
         <div className={styles.container}>
           {movie?.facts.map((item) => (
-            <Container withBackground classname={styles.factCard}>
+            <Container
+              key={item.value}
+              withBackground
+              classname={styles.factCard}
+            >
               <TextContainer
                 key={item.value}
                 text={replaceQuotationMark(removeLink(item.value))}

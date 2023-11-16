@@ -13,16 +13,12 @@ export const MovieTrailers = () => {
   return (
     <Container title="Трейлеры">
       <HorizontalList>
-        {movie?.videos.trailers.map((item) => (
-          <>
+        {movie?.videos.trailers.map((item, index) => (
+          <div key={`${item.name}${index}`}>
             {item.url && (
-              <SimpleCard
-                key={item.url}
-                videoSrc={item.url}
-                title={item.name ?? undefined}
-              />
+              <SimpleCard videoSrc={item.url} title={item.name ?? undefined} />
             )}
-          </>
+          </div>
         ))}
       </HorizontalList>
     </Container>

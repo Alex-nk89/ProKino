@@ -5,7 +5,7 @@ import { getDatePremiere } from "../../../utils/functions/date";
 import clsx from "clsx";
 import { CoverProps } from "../Cover/Cover.props";
 
-export const PremiereSlide = (props: CoverProps) => {
+export const MovieSlide = (props: CoverProps) => {
   const { backdrop, name, poster, description, shortDescription, premiere } =
     props;
   const isMobile = useMediaQuery("(max-width: 900px)");

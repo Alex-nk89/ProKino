@@ -1,7 +1,7 @@
 import { Movie } from "../../../domains/movie";
-import { Premiere } from "../../../domains/premiere";
+import { Popular } from "../../../domains/populars";
 
-export type CoverProps = Partial<Premiere> &
+export type CoverProps = Partial<Popular> &
   Pick<
     Movie,
     | "id"
