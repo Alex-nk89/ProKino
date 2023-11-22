@@ -153,3 +153,8 @@ export interface InfinityQueryParams {
   page?: number;
   limit?: number;
 }
+
+export interface File {
+  id: number;
+  src: string;
+}

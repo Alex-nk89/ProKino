@@ -10,7 +10,7 @@ export const useMovie = ({ id }: MovieResponse) =>
 export const useGetMovieImage = (
   params: ApiMethodParameters<typeof movieService.getMovieImageList>
 ) => {
-  const { id, limit = 10, page = 0 } = params;
+  const { id, limit = 10, page = 1 } = params;
 
   return useInfiniteQuery(
     keys.getMovieImageList(id),
