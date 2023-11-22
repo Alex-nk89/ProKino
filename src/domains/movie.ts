@@ -1,4 +1,4 @@
-import { Person } from "./common";
+import { ImageType, InfinityQueryParams, Person } from "./common";
 import { Film } from "./films";
 
 export interface Movie
@@ -31,4 +31,28 @@ export interface MovieResponse {
 export interface MovieInfoProps {
   key: string;
   value?: string | number | Person[];
+}
+
+export interface MovieImage {
+  movieId: number;
+  type: ImageType;
+  url: string;
+  previewUrl: string;
+  height: number;
+  width: number;
+  createdAt: string;
+  updatedAt: string;
+  id: number;
+}
+
+export interface MovieImageListResponse {
+  docs: MovieImage[];
+  total: number;
+  limit: number;
+  page: number;
+  pages: number;
+}
+
+export interface MovieImageListParams extends InfinityQueryParams {
+  id: number;
 }

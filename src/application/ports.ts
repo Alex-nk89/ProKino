@@ -1,4 +1,9 @@
-import { Movie, MovieResponse } from "../domains/movie";
+import {
+  Movie,
+  MovieImageListParams,
+  MovieImageListResponse,
+  MovieResponse,
+} from "../domains/movie";
 import { PopularsList, PopularsRequestParams } from "../domains/populars";
 
 export interface PopularService {
@@ -7,4 +12,8 @@ export interface PopularService {
 
 export interface MovieService {
   getMovie(params: MovieResponse): Promise<Movie>;
+
+  getMovieImageList(
+    params: MovieImageListParams
+  ): Promise<MovieImageListResponse>;
 }

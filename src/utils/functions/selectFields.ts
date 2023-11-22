@@ -22,5 +22,10 @@ export const getSelectFields = () => {
     .map((item) => `notNullFields=${item}`)
     .join("&");
 
-  return { premiereValues, premiereUrl, premiereNotNullFileds };
+  const imageStill = {
+    height: "360-2600",
+    type: "still",
+  };
+
+  return { premiereValues, premiereUrl, premiereNotNullFileds, imageStill };
 };
