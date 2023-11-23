@@ -1,3 +1,7 @@
 .wrapper {
   padding-top: 80px;
+
+  @media (min-width: 900px) {
+    padding: 80px var(--size-xl) var(--size-xl);
+  }
 }
