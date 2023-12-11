@@ -28,6 +28,16 @@ export interface MovieResponse {
   id: number;
 }
 
+export type MovieType =
+  | "backdrops"
+  | "cover"
+  | "frame"
+  | "promo"
+  | "screenshot"
+  | "shooting"
+  | "still"
+  | "wallpaper";
+
 export interface MovieInfoProps {
   key: string;
   value?: string | number | Person[];
@@ -55,4 +65,5 @@ export interface MovieImageListResponse {
 
 export interface MovieImageListParams extends InfinityQueryParams {
   id: number;
+  movieType?: MovieType;
 }
