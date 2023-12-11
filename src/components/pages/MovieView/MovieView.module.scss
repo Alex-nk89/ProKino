@@ -1,7 +1,5 @@
 .wrapper {
   @include info-block-V(var(--size-xl));
-
-  padding: var(--size-xl);
 }
 
 .info {

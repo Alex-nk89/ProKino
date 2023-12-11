@@ -1,0 +1,15 @@
+.list {
+  @include info-block-H(var(--size-l));
+
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  img {
+    max-height: 360px;
+    height: fit-content;
+    object-position: center;
+    cursor: pointer;
+  }
+}

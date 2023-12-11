@@ -7,14 +7,18 @@ import { Image, NavLink, Skeleton } from "@mantine/core";
 import { ModalGallery } from "../../molecules/ModalGallery/ModalGallery";
 import { useCallback, useMemo, useState } from "react";
 import { getGaleryListFromMovieImage } from "../../../utils/functions/getGaleryList";
-import styles from "./ImageList.module.scss";
 import { useDisclosure } from "@mantine/hooks";
+import styles from "./ImageList.module.scss";
 
 export const ImageList = ({ id }: ImageListProps) => {
   const [opened, { open, close }] = useDisclosure();
-  const { data: imageList, isLoading, isSuccess } = useGetMovieImage({ id });
-
   const [activeImage, setActiveImage] = useState(0);
+
+  const {
+    data: imageList,
+    isLoading,
+    isSuccess,
+  } = useGetMovieImage({ id, movieType: "still" });
 
   const galleryList = useMemo(
     () => imageList && getGaleryListFromMovieImage(imageList?.pages[0].docs),

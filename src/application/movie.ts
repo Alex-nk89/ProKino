@@ -17,8 +17,8 @@ export const useGetMovieImage = (
     ({ pageParam = page }) =>
       movieService.getMovieImageList({ ...params, limit, page: pageParam }),
     {
-      getNextPageParam: (lastPage, allPages) =>
-        lastPage.docs.length < limit ? false : allPages.length * limit,
+      getNextPageParam: (data) =>
+        data.pages > data.page ? data.page + 1 : undefined,
     }
   );
 };
